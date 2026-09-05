@@ -1,0 +1,22 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+
+# rspec failure tracking
+.rspec_status
+
+# Personal, private notes kept locally and excluded from the repo
+# (e.g. the development diary "how-i-created-my-first-ruby-gem-with-kiro.md").
+/private-notes/
+
+# Built gem artifacts
+/*.gem
+
+# Gems should not commit their lockfile (Bundler resolves it per environment).
+# Committing it here pinned Bundler 4.x, which breaks CI on Ruby < 3.2.
+/Gemfile.lock
