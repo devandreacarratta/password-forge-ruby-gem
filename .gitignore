@@ -24,3 +24,8 @@
 # (same reasoning as the root Gemfile.lock above), so it is not committed.
 /examples/local-consumer/Gemfile.lock
 /examples/local-consumer/.bundle/
+graphify-out/
+.graphify-cache/
+
+# Custom File
+hermes-run.sh
