@@ -3,7 +3,7 @@
 ## Directory layout
 
 ```
-password_forge/
+password-forge-ruby-gem/             # repo root
 ├── lib/
 │   ├── password_forge.rb            # Entry point: requires all components
 │   └── password_forge/
@@ -19,7 +19,16 @@ password_forge/
 │       ├── charset_spec.rb
 │       ├── validation_spec.rb
 │       └── generator_spec.rb
+├── examples/                        # Runnable local demos (not packaged)
+│   ├── smoke_test.rb                # Loads the gem from source and prints samples
+│   └── local-consumer/             # Mini "external" project using the gem via path:
+│       ├── Gemfile
+│       └── run.rb
+├── docs/                            # Extended documentation (not packaged)
+│   ├── README.md                    # Docs index
+│   └── local-testing.md            # How to try the gem locally
 ├── sig/                             # RBS type signatures
+├── bin/                             # setup + console helper scripts
 ├── .github/workflows/
 │   ├── main.yml                     # CI: RSpec matrix + RuboCop
 │   └── release.yml                  # Trusted Publishing on v* tags
@@ -32,6 +41,9 @@ password_forge/
 ├── CHANGELOG.md
 └── LICENSE.txt
 ```
+
+`Gemfile.lock` is generated per environment and git-ignored (see Tech), so it is
+not part of the tracked tree above.
 
 ## Architecture
 
