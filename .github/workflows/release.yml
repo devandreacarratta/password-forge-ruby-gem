@@ -1,0 +1,44 @@
+name: Release
+
+# Publishes the gem to RubyGems.org via Trusted Publishing (OIDC) when a
+# version tag is pushed. No API tokens are stored: GitHub Actions authenticates
+# to RubyGems.org with a short-lived, scoped token.
+#
+# Prerequisites (one-time, on RubyGems.org):
+#   - A trusted publisher configured for this gem with:
+#       owner:       devandreacarratta
+#       repository:  password-forge-ruby-gem
+#       workflow:    release.yml
+#       environment: release
+#   - For the very first publish (gem does not yet exist), configure a
+#     "pending trusted publisher" from your RubyGems.org profile first.
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      id-token: write
+
+    # Must match the environment configured on the RubyGems trusted publisher.
+    environment: release
+
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          ruby-version: ruby
+
+      - name: Publish to RubyGems
+        uses: rubygems/release-gem@v1
