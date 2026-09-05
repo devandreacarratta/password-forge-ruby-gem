@@ -11,7 +11,6 @@
 .rspec_status
 
 # Personal, private notes kept locally and excluded from the repo
-# (e.g. the development diary "how-i-created-my-first-ruby-gem-with-kiro.md").
 /private-notes/
 
 # Built gem artifacts
@@ -20,3 +19,13 @@
 # Gems should not commit their lockfile (Bundler resolves it per environment).
 # Committing it here pinned Bundler 4.x, which breaks CI on Ruby < 3.2.
 /Gemfile.lock
+
+# Local example consumer project: Bundler resolves its lockfile per environment
+# (same reasoning as the root Gemfile.lock above), so it is not committed.
+/examples/local-consumer/Gemfile.lock
+/examples/local-consumer/.bundle/
+graphify-out/
+.graphify-cache/
+
+# Custom File
+hermes-run.sh

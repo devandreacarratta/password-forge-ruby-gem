@@ -1,0 +1,13 @@
+# frozen_string_literal: true
+
+# Minimal "external" project that consumes password_forge from local source.
+#
+# The path is relative to this Gemfile: two levels up is the gem repo root,
+# where password_forge.gemspec lives. In a real project you would point this
+# at wherever you checked out the gem, e.g.:
+#
+#     gem "password_forge", path: "/absolute/path/to/password-forge-ruby-gem"
+#
+source "https://rubygems.org"
+
+gem "password_forge", path: "../.."

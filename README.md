@@ -10,12 +10,18 @@ categories are enabled by default, and a clear error is raised if you disable
 every one of them. Randomness is provided by Ruby's `SecureRandom`.
 
 This gem is also a showcase for building and shipping a Ruby gem the **Kiro
-way**: it ships with Kiro skills, project steering, hooks and an MCP server (see
-the [Roadmap](#roadmap)).
+way**. Kiro skills, project steering, hooks and an MCP server are being added
+incrementally (see the [Roadmap](#roadmap)).
 
 ## Installation
 
-Install the gem and add it to the application's Gemfile by executing:
+> **Not on RubyGems yet.** The first public release is planned for 0.1.0 (see
+> the [Roadmap](#roadmap)). Until then, see [Trying it
+> locally](#trying-it-locally) to run the gem from source or via a local path
+> dependency.
+
+Once published, install the gem and add it to the application's Gemfile by
+executing:
 
 ```bash
 bundle add password_forge
@@ -97,11 +103,26 @@ A non-positive or non-integer `length` raises `ArgumentError`.
 | `numeric_case` | `0`–`9`                  |
 | `special_case` | `` !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ `` |
 
+## Trying it locally
+
+You can run the gem without installing it from RubyGems:
+
+- **From this repository:** `ruby examples/smoke_test.rb` prints a few sample
+  passwords straight from the source tree.
+- **From another project:** add `gem "password_forge", path:
+  "/path/to/password-forge-ruby-gem"` to that project's `Gemfile`, run `bundle
+  install`, then `require "password_forge"`. See
+  [`examples/local-consumer/`](examples/local-consumer) for a working example.
+
+Full instructions, including the interactive console and building a local
+`.gem`, are in [docs/local-testing.md](docs/local-testing.md).
+
 ## Roadmap
 
 `PasswordForge` is developed in incremental, tagged releases:
 
 - **0.0.1** — Core generator, character sets, validation, tests, docs.
+- **0.0.2** — Local-testing examples (`examples/`) and documentation (`docs/`).
 - **0.1.0** — First public release on RubyGems.org via Trusted Publishing.
 - **0.2.0** — Kiro skills for gem authors (feature TDD, version bump, release).
 - **0.3.0** — Project `.kiro/` folder with steering and conventions.
@@ -113,9 +134,12 @@ A non-positive or non-integer `length` raises `ArgumentError`.
 
 After checking out the repo, run `bin/setup` to install dependencies. Then run
 `bundle exec rake` to run the tests and the linter. You can also run
-`bin/console` for an interactive prompt to experiment.
+`bin/console` for an interactive prompt to experiment, or
+`ruby examples/smoke_test.rb` for a quick check straight from source.
 
-To install this gem onto your local machine, run `bundle exec rake install`.
+To install this gem onto your local machine, run `bundle exec rake install`. For
+the full local workflow — including running it from a separate project and
+uninstalling — see [docs/local-testing.md](docs/local-testing.md).
 
 ## Contributing
 

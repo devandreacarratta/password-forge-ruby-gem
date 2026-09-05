@@ -12,7 +12,7 @@ The gem has **no runtime dependencies**.
 
 ## Common commands
 
-Run from the `password_forge/` directory:
+Run from the repository root (`password-forge-ruby-gem/`):
 
 ```bash
 bundle install            # install development dependencies
