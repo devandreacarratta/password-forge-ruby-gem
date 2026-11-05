@@ -2,9 +2,9 @@
 
 ## Stack
 
-- **Language:** Ruby, `required_ruby_version >= 3.0.0`.
+- **Language:** Ruby, `required_ruby_version >= 3.1.0`.
 - **Test framework:** RSpec.
-- **Linter:** RuboCop (config in `.rubocop.yml`, `TargetRubyVersion: 3.0`).
+- **Linter:** RuboCop (config in `.rubocop.yml`, `TargetRubyVersion: 3.1`).
 - **Randomness:** `SecureRandom` (standard library, no runtime dependencies).
 - **Type signatures:** RBS stubs under `sig/`.
 
@@ -62,7 +62,11 @@ Publishing is automated via OIDC — no API tokens are stored.
   `password-forge-ruby-gem`).
 - **MFA required for pushes** via `rubygems_mfa_required = "true"` in the
   gemspec.
-- **CI splits test and lint:** RSpec runs across Ruby 3.0–3.4; RuboCop runs once
-  on 3.4 to avoid version-specific style noise.
+- **CI splits test and lint:** RSpec runs across Ruby 3.1–3.4 and 4.0; RuboCop
+  runs once on 3.4 to avoid version-specific style noise.
+- **Ruby floor follows real usage, not just EOL dates.** The `>= 3.1` floor
+  drops Ruby 3.0 (end-of-life since 2024 with no observed downloads) while
+  keeping every Ruby version that actually installs the gem. No upper bound is
+  set, so new Ruby releases are supported automatically.
 - **Personal diary** lives in `private-notes/` (git-ignored), everything else is
   English and tracked.

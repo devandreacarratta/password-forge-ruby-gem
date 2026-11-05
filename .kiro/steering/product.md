@@ -38,7 +38,10 @@ The project ships in small, tagged increments. Each version is merged to `main`
 before the next begins:
 
 - **0.0.1** — Core generator, character sets, validation, tests, docs. (done)
-- **0.1.0** — First public release on RubyGems.org via Trusted Publishing.
+- **0.0.2** — Local-testing examples and documentation. (done)
+- **0.1.0** — Ruby support refresh (floor raised to 3.1, CI through Ruby 4.0,
+  dev-dependency bump) and first public release on RubyGems.org via Trusted
+  Publishing.
 - **0.2.0** — Kiro skills for gem authors (feature TDD, version bump, release).
 - **0.3.0** — Project `.kiro/` folder with full steering and conventions.
 - **0.4.0** — Kiro hooks (run specs on save, changelog reminders, etc.).
