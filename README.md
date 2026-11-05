@@ -117,13 +117,22 @@ You can run the gem without installing it from RubyGems:
 Full instructions, including the interactive console and building a local
 `.gem`, are in [docs/local-testing.md](docs/local-testing.md).
 
+## Articles
+
+- [Using PasswordForge](https://devandreacarratta.it/en/coding-zone/using-password-forge/)
+  — a practical walkthrough of installing the gem and generating passwords.
+- [How I built my first Ruby gem with Kiro](https://devandreacarratta.it/en/technical-stories/how-i-built-my-first-ruby-gem-with-kiro/)
+  — the story behind the gem and how it was built the Kiro way.
+
 ## Roadmap
 
 `PasswordForge` is developed in incremental, tagged releases:
 
 - **0.0.1** — Core generator, character sets, validation, tests, docs.
 - **0.0.2** — Local-testing examples (`examples/`) and documentation (`docs/`).
-- **0.1.0** — First public release on RubyGems.org via Trusted Publishing.
+- **0.1.0** — Ruby support refresh (floor raised to 3.1, CI through Ruby 4.0,
+  dev-dependency bump) and first public release on RubyGems.org via Trusted
+  Publishing.
 - **0.2.0** — Kiro skills for gem authors (feature TDD, version bump, release).
 - **0.3.0** — Project `.kiro/` folder with steering and conventions.
 - **0.4.0** — Kiro hooks (run specs on save, changelog reminders, and more).

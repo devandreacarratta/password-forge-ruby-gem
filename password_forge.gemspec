@@ -13,10 +13,11 @@ Gem::Specification.new do |spec|
                      "well-tested Ruby gem with a clean, idiomatic API."
   spec.homepage = "https://github.com/devandreacarratta/password-forge-ruby-gem"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 3.0.0"
+  spec.required_ruby_version = ">= 3.1.0"
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/devandreacarratta/password-forge-ruby-gem/tree/main"
   spec.metadata["changelog_uri"] = "https://github.com/devandreacarratta/password-forge-ruby-gem/blob/main/CHANGELOG.md"
+  spec.metadata["documentation_uri"] = "https://devandreacarratta.it/en/coding-zone/using-password-forge/"
 
   # Require MFA for gem pushes to protect against supply chain attacks.
   # See: https://guides.rubygems.org/mfa-requirement-opt-in/

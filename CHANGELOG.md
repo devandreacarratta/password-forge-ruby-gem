@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-11-05
+
+### Changed
+
+- **Raised the minimum Ruby version to 3.1** (`required_ruby_version >= 3.1.0`).
+  Ruby 3.0 reached end-of-life in April 2024 and showed no download activity, so
+  dropping it removes an unsupported runtime without affecting real users. No
+  upper bound is set, so current and future Ruby releases remain supported.
+- Updated the CI test matrix to Ruby 3.1, 3.2, 3.3, 3.4 and 4.0 (dropped 3.0,
+  added 4.0). RuboCop still runs once on 3.4.
+- Aligned RuboCop `TargetRubyVersion` to 3.1.
+- Refreshed development dependencies: `rspec` to `~> 3.13` and `rubocop` to
+  `~> 1.92` (raised the lower bounds to the current minor series; `rake` stays
+  at `~> 13.0`).
+
 ## [0.0.2] - 2026-09-05
 
 ### Added
@@ -43,6 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `PasswordForge.generate` convenience wrapper.
 - RSpec test suite, RuboCop configuration and README.
 
-[Unreleased]: https://github.com/devandreacarratta/password-forge-ruby-gem/compare/v0.0.2...HEAD
+[Unreleased]: https://github.com/devandreacarratta/password-forge-ruby-gem/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/devandreacarratta/password-forge-ruby-gem/compare/v0.0.2...v0.1.0
 [0.0.2]: https://github.com/devandreacarratta/password-forge-ruby-gem/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/devandreacarratta/password-forge-ruby-gem/releases/tag/v0.0.1
