@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-20
+
 ### Security
 - Reviewed the gem against the Ruby Regexp / String case-conversion advisories
   published on 2026-11-18 (fixed in Ruby 4.0.10, 3.4.13, 3.3.14). The gem uses
@@ -65,7 +67,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `PasswordForge.generate` convenience wrapper.
 - RSpec test suite, RuboCop configuration and README.
 
-[Unreleased]: https://github.com/devandreacarratta/password-forge-ruby-gem/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/devandreacarratta/password-forge-ruby-gem/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/devandreacarratta/password-forge-ruby-gem/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/devandreacarratta/password-forge-ruby-gem/compare/v0.0.2...v0.1.0
 [0.0.2]: https://github.com/devandreacarratta/password-forge-ruby-gem/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/devandreacarratta/password-forge-ruby-gem/releases/tag/v0.0.1
