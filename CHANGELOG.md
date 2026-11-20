@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Security
+- Reviewed the gem against the Ruby Regexp / String case-conversion advisories
+  published on 2026-11-18 (fixed in Ruby 4.0.10, 3.4.13, 3.3.14). The gem uses
+  neither regular expressions nor case conversion on untrusted input, so it is
+  not affected by its own code. Users should still run a patched Ruby.
+- Ignored `.tokensave/` in `.gitignore`.
+
 ## [0.1.0] - 2026-11-05
 
 ### Changed
