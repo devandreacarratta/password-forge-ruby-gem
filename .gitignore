@@ -26,6 +26,7 @@
 /examples/local-consumer/.bundle/
 graphify-out/
 .graphify-cache/
+.tokensave/
 
 # Custom File
 hermes-run.sh
